@@ -1,0 +1,11 @@
+--- ./gcc/doc/cppopts.texi	2010-04-02 13:54:46.000000000 -0600
++++ ../../avr-gcc-compilado/gcc-4.5.1/gcc/doc/cppopts.texi	2014-07-11 10:48:07.822515507 -0500
+@@ -760,7 +760,7 @@
+ Enable special code to work around file systems which only permit very
+ short file names, such as MS-DOS@.
+ 
+-@itemx --help
++@item --help
+ @itemx --target-help
+ @opindex help
+ @opindex target-help
