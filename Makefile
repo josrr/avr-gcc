@@ -47,7 +47,7 @@ gmp-5.0.2.installed: gmp-5.0.2.tar.bz2.unpacked
 mpfr-3.0.1.installed: mpfr-3.0.1.tar.bz2.unpacked
 	$(INST)
 	( cd mpfr-3.0.1 &&      ./configure $(addprefix --prefix=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
-	
+
 mpc-0.9.installed: gmp-5.0.2.installed mpfr-3.0.1.installed mpc-0.9.tar.gz.unpacked
 	$(INST)
 	( cd mpc-0.9 &&         ./configure $(addprefix --prefix=,$(LIBPREFIX)) $(addprefix --with-gmp=,$(LIBPREFIX)) $(addprefix --with-mpfr=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
@@ -62,7 +62,7 @@ libelf-0.8.13.installed: libelf-0.8.13.tar.gz.unpacked
 
 binutils-2.20.1.installed: binutils-2.20.1.tar.bz2.unpacked binutils-2.20.1.patched
 	$(INST)
-	( mkdir -p binutilsobj && cd binutilsobj && $(pathexport) ../binutils-2.20.1/configure $(addprefix --prefix=,$(GCCPREFIX)) --target=avr --disable-nls && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
+	( mkdir -p binutilsobj && cd binutilsobj && $(pathexport) ../binutils-2.20.1/configure --enable-werror=no $(addprefix --prefix=,$(GCCPREFIX)) --target=avr --disable-nls && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
 gcc-4.5.1.installed: binutils-2.20.1.installed gmp-5.0.2.installed mpfr-3.0.1.installed mpc-0.9.installed ppl-0.11.2.installed libelf-0.8.13.installed gcc-4.5.1.tar.bz2.unpacked gcc-4.5.1.patched
 	$(INST)
