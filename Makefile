@@ -44,11 +44,11 @@ gmp-5.0.2.installed: gmp-5.0.2.tar.bz2.unpacked
 	$(INST)
 	( cd gmp-5.0.2 &&       ./configure $(addprefix --prefix=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
-mpfr-3.0.1.installed: mpfr-3.0.1.tar.bz2.unpacked
+mpfr-3.1.2.installed: mpfr-3.1.2.tar.bz2.unpacked
 	$(INST)
-	( cd mpfr-3.0.1 &&      ./configure $(addprefix --prefix=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
+	( cd mpfr-3.1.2 &&      ./configure $(addprefix --prefix=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
-mpc-0.9.installed: gmp-5.0.2.installed mpfr-3.0.1.installed mpc-0.9.tar.gz.unpacked
+mpc-0.9.installed: gmp-5.0.2.installed mpfr-3.1.2.installed mpc-0.9.tar.gz.unpacked
 	$(INST)
 	( cd mpc-0.9 &&         ./configure $(addprefix --prefix=,$(LIBPREFIX)) $(addprefix --with-gmp=,$(LIBPREFIX)) $(addprefix --with-mpfr=,$(LIBPREFIX)) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
@@ -64,7 +64,7 @@ binutils-2.20.1.installed: binutils-2.20.1.tar.bz2.unpacked binutils-2.20.1.patc
 	$(INST)
 	( mkdir -p binutilsobj && cd binutilsobj && $(pathexport) ../binutils-2.20.1/configure --enable-werror=no $(addprefix --prefix=,$(GCCPREFIX)) --target=avr --disable-nls && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
-gcc-4.5.1.installed: binutils-2.20.1.installed gmp-5.0.2.installed mpfr-3.0.1.installed mpc-0.9.installed ppl-0.11.2.installed libelf-0.8.13.installed gcc-4.5.1.tar.bz2.unpacked gcc-4.5.1.patched
+gcc-4.5.1.installed: binutils-2.20.1.installed gmp-5.0.2.installed mpfr-3.1.2.installed mpc-0.9.installed ppl-0.11.2.installed libelf-0.8.13.installed gcc-4.5.1.tar.bz2.unpacked gcc-4.5.1.patched
 	$(INST)
 	( mkdir -p gccobj && cd gccobj && $(pathexport) ../gcc-4.5.1/configure $(GCCOPTS) && $(makedirs) $(MAKE) && $(MAKE) install ) && touch $@
 
@@ -92,7 +92,7 @@ avr-libc-1.7.1/avr/lib/%/Makefile.in: avr-libc-1.7.1.tar.bz2.unpacked
 avr-libc-1.7.1.patched: $(emptymakefiles)
 
 clean:
-	rm -rf binutils-2.20.1 avr-libc-1.7.1 gcc-4.5.1 gmp-5.0.2 mpfr-3.0.1 ppl-0.11.2 libelf-0.8.13 mpc-0.9 *.unpacked *.patched *.installed gccobj binutilsobj avrlibcobj
+	rm -rf binutils-2.20.1 avr-libc-1.7.1 gcc-4.5.1 gmp-5.0.2 mpfr-3.1.2 ppl-0.11.2 libelf-0.8.13 mpc-0.9 *.unpacked *.patched *.installed gccobj binutilsobj avrlibcobj
 .PHONY: clean
 
 avr-libc-1.7.1.tar.bz2:
@@ -104,7 +104,7 @@ mpc-0.9.tar.gz:
 ppl-0.11.2.tar.bz2:
 	wget wget http://bugseng.com/products/ppl/download/ftp/releases/0.11.2/ppl-0.11.2.tar.bz2
 
-mpfr-3.0.1.tar.bz2:
+mpfr-3.1.2.tar.bz2:
 	wget http://www.mpfr.org/mpfr-current/mpfr-3.1.2.tar.bz2
 
 gmp-5.0.2.tar.bz2:
