@@ -1,0 +1,18 @@
+--- ./gcc/doc/gcc.texi	2009-07-16 15:36:10.000000000 -0500
++++ ../../avr-gcc-compilado/gcc-4.5.1/gcc/doc/gcc.texi	2014-07-11 10:52:55.715943096 -0500
+@@ -86,9 +86,13 @@
+ @item GNU Press
+ @tab Website: www.gnupress.org
+ @item a division of the
+-@tab General: @tex press@@gnu.org @end tex
++@tab General:
++@tex press@@gnu.org
++@end tex
+ @item Free Software Foundation
+-@tab Orders:  @tex sales@@gnu.org @end tex
++@tab Orders:
++@tex sales@@gnu.org
++@end tex
+ @item 51 Franklin Street, Fifth Floor
+ @tab Tel 617-542-5942
+ @item Boston, MA 02110-1301 USA

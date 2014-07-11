@@ -1,0 +1,11 @@
+--- ./gcc/doc/tm.texi	2010-06-24 16:06:37.000000000 -0500
++++ ../../avr-gcc-compilado/gcc-4.5.1/gcc/doc/tm.texi	2014-07-11 11:01:24.138464217 -0500
+@@ -11085,5 +11085,6 @@
+ accepted by immediate-add plus one.  We currently assume that the
+ value of @code{TARGET_CONST_ANCHOR} is a power of 2.  For example, on
+ MIPS, where add-immediate takes a 16-bit signed value,
+-@code{TARGET_CONST_ANCHOR} is set to @samp{0x8000}.  The default value
+-is zero, which disables this optimization.  @end deftypevr
++@code{TARGET_CONST_ANCHOR} is set to @samp{0x8000}.  The default valueis
++zero, which disables this optimization.
++@end deftypevr
