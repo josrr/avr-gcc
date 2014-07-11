@@ -102,7 +102,7 @@ mpc-0.9.tar.gz:
 	wget http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz
 
 ppl-0.11.2.tar.bz2:
-	wget wget http://bugseng.com/products/ppl/download/ftp/releases/0.11.2/ppl-0.11.2.tar.bz2
+	wget http://bugseng.com/products/ppl/download/ftp/releases/0.11.2/ppl-0.11.2.tar.bz2
 
 mpfr-3.1.2.tar.bz2:
 	wget http://www.mpfr.org/mpfr-current/mpfr-3.1.2.tar.bz2
