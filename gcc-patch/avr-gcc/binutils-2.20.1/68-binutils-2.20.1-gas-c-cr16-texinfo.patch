@@ -1,0 +1,32 @@
+--- ./gas/doc/c-cr16.texi	2009-09-02 02:24:21.000000000 -0500
++++ ../../avr-gcc-compilado/binutils-2.20.1/gas/doc/c-cr16.texi	2014-07-11 10:10:13.255236541 -0500
+@@ -45,23 +45,23 @@
+ @table @samp
+ @item Immediate Operand
+ - s ---- 4 bits
+-@item 
++@item 16
+ - m ---- 16 bits, for movb and movw instructions.
+-@item 
++@item 20
+ - m ---- 20 bits, movd instructions.
+-@item 
++@item 32
+ - l ---- 32 bits
+ 
+ @item Absolute Operand
+ - s ---- Illegal specifier for this operand.
+-@item  
++@item  20
+ - m ---- 20 bits, movd instructions.
+ 
+ @item Displacement Operand
+ - s ---- 8 bits
+-@item
++@item 16
+ - m ---- 16 bits
+-@item 
++@item 24
+ - l ---- 24 bits
+ @end table
+ 

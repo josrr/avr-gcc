@@ -1,0 +1,48 @@
+--- ./gas/doc/c-arm.texi	2009-09-02 02:24:21.000000000 -0500
++++ ../../avr-gcc-compilado/binutils-2.20.1/gas/doc/c-arm.texi	2014-07-11 10:18:48.717792595 -0500
+@@ -337,7 +337,7 @@
+ @code{unified} syntax, which can be selected via the @code{.syntax}
+ directive, and has the following main features:
+ 
+-@table @bullet
++@itemize @bullet
+ @item
+ Immediate operands do not require a @code{#} prefix.
+ 
+@@ -362,7 +362,7 @@
+ @item
+ All instructions set the flags if and only if they have an @code{s}
+ affix.
+-@end table
++@end itemize
+ 
+ @node ARM-Chars
+ @subsection Special Characters
+@@ -394,13 +394,6 @@
+ @cindex register names, ARM
+ *TODO* Explain about ARM register naming, and the predefined names.
+ 
+-@node ARM Floating Point
+-@section Floating Point
+-
+-@cindex floating point, ARM (@sc{ieee})
+-@cindex ARM floating point (@sc{ieee})
+-The ARM family uses @sc{ieee} floating-point numbers.
+-
+ @node ARM-Relocations
+ @subsection ARM relocation generation
+ 
+@@ -442,6 +435,13 @@
+         MOVT r0, #:upper16:foo
+ @end smallexample
+ 
++@node ARM Floating Point
++@section Floating Point
++
++@cindex floating point, ARM (@sc{ieee})
++@cindex ARM floating point (@sc{ieee})
++The ARM family uses @sc{ieee} floating-point numbers.
++
+ @node ARM Directives
+ @section ARM Machine Directives
+ 
